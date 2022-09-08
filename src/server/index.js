@@ -66,9 +66,3 @@ app.post("/api", (req, res) => {
     res.send(apiData);
   });
 });
-
-// tests:
-
-//https://en.wikipedia.org/wiki/Natural_language_processing
-
-// https://www.reuters.com/world/americas/police-hunt-two-men-after-knife-rampage-kills-10-canada-2022-09-05/
