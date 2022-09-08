@@ -38,8 +38,13 @@ function formHandler(event) {
       document.getElementById(
         "confidence"
       ).innerHTML = `Confidence: ${data.confidence}`;
-      document.getElementById("irony").innerHTML = `Rrony: ${data.irony}`;
-      document.getElementById("score").innerHTML = `Score: ${data.score_tag}`;
+      document.getElementById(
+        "subjectivity"
+      ).innerHTML = `Subjectivity: ${data.subjectivity}`;
+      document.getElementById("irony").innerHTML = `Irony: ${data.irony}`;
+      document.getElementById(
+        "score"
+      ).innerHTML = `Score(P = Positive | N = Negative): ${data.score_tag}`;
     });
   } else {
     alert("enter a valid URL");
