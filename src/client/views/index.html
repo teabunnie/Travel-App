@@ -1,50 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Test</title>
-    <script>
-      // Check that service workers are supported
-      if ("serviceWorker" in navigator) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/service-worker.js");
-        });
-      }
-    </script>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- linkings -->
+    <!-- <link rel="stylesheet" href="../styles/styles.css" />
+    <script src="../index.js"></script> -->
+
+    <title>Travel-App</title>
   </head>
 
+  <!-- body -->
   <body>
     <header>
-      <div class="">Logo</div>
-      <div class="">navigation</div>
+      <!-- Image and text -->
+
+      <nav class="navbar">
+        <!-- <a class="navbar-brand" href="#">
+      </a> -->
+        <h1>Travel Planner</h1>
+      </nav>
     </header>
 
-    <main>
-      <section>
-        <div class="userInput">
-          <form action="">
-            <input id="userInput" type="text" placeholder="Enter your URL" />
-            <button id="submit" type="submit">Submit</button>
-          </form>
-        </div>
-      </section>
+    <section class="CurrentTrip">
+      <!-- <img /> -->
+      <div id="userInteractive">
+        <!-- // User input for Country departure -->
+        <form id="userForm" action="">
+          <p>City :</p>
+          <input id="cityInput" type="text" placeholder="Enter city" />
+          <br />
+          <p>Country :</p>
+          <input id="countryInput" type="text" placeholder="Enter country" />
+          <br />
+          <p>Date of start trip :</p>
+          <input
+            id="departDateInput"
+            type="text"
+            placeholder="enter date: e.g: 01/23/22"
+          />
+          <br />
+          <p>Date of end trip :</p>
+          <input
+            id="endDateInput"
+            type="text"
+            placeholder="enter date: e.g: 01/30/22"
+          />
+          <br />
+          <button id="submit" type="submit">Save Trip</button>
+          <button id="delete" type="submit">Delete Trip</button>
+        </form>
+      </div>
+      <div id="temp_text">
+        <p class="travel" id="departCountry">My trip to:</p>
+        <p class="travel" id="departTime">Departing:</p>
 
-      <section>
-        <strong>Form Results:</strong>
-        <div id="results">
-          <div id="text"></div>
-          <div id="agreement"></div>
-          <div id="confidence"></div>
-          <div id="irony"></div>
-          <div id="score"></div>
-          <div id="subjectivity"></div>
-        </div>
-      </section>
-    </main>
+        <div class="picture" id="picture"></div>
+        <p class="travel" id="timeToDepart">
+          Days left before vacation time!...
+        </p>
+        <p class="travel" id="tripLength">Your trip duration is...</p>
+        <p class="weather">Typical weather for then is...</p>
+        <p class="weather" id="weatherData">High and low temps of...</p>
+        <p class="weather" id="weatherSummary">Weather will be like...</p>
+      </div>
+    </section>
 
-    <footer>
-      <p>This is a footer</p>
-    </footer>
+    <script></script>
   </body>
 </html>
