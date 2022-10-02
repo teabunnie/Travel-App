@@ -129,3 +129,5 @@ app.post("/api", (req, res) => {
     });
   });
 });
+
+export { pixaApi };

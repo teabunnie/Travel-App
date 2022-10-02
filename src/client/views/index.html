@@ -7,9 +7,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <!-- linkings -->
     <!-- <link rel="stylesheet" href="../styles/styles.css" />
-    <script src="../index.js"></script> -->
+    <script src="../index.js" type="module">
+
+    </script> -->
 
     <title>Travel-App</title>
   </head>
@@ -70,6 +71,14 @@
       </div>
     </section>
 
-    <script></script>
+    <script>
+      // // Check that service workers are supported
+
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
   </body>
 </html>
