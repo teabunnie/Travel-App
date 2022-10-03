@@ -22,10 +22,7 @@ const postData = async (path, userData) => {
 
 function formHandler(event) {
   event.preventDefault();
-  // const geoUsername = "teabunnie1016";
-  // const weatherKey = "28905dbcca9d43c786d304a2b766d571";
-  // let allData = [];
-  // console.log("hello");
+
   const country = document.getElementById("countryInput").value;
   const city = document.getElementById("cityInput").value;
   const date = document.getElementById("departDateInput").value;
@@ -36,18 +33,12 @@ function formHandler(event) {
   } else {
     // handle data and send POST to server
     console.log(handleUserInput(city, country, date, endDate));
-    const {
-      handledCity,
-      handledCountry,
-      handledDate,
-      handledDaysLeft,
-      handledDurationDate,
-    } = handleUserInput(city, country, date, endDate);
+    const { handledCity, handledCountry, handledDate, handledDurationDate } =
+      handleUserInput(city, country, date, endDate);
     let userData = {
       city: handledCity,
       country: handledCountry,
       date: handledDate,
-      daysLeft: handledDaysLeft,
       duration: handledDurationDate,
     };
     console.log(userData);
@@ -60,7 +51,6 @@ function formHandler(event) {
       const apiHighTemp = data.allData[4];
       const apiWeatherSummary = data.allData[5];
       const apiPicture = data.allData[6];
-      const apiDaysLeft = userData.daysLeft;
       const apiduration = userData.duration;
 
       // insert picture
@@ -82,9 +72,6 @@ function formHandler(event) {
       document.getElementById(
         "weatherSummary"
       ).innerHTML = `That day will be: ${apiWeatherSummary}`;
-      document.getElementById(
-        "timeToDepart"
-      ).innerHTML = `Days left before vacation time!: ${apiDaysLeft}`;
       document.getElementById(
         "tripLength"
       ).innerHTML = `Your trip duration is ${apiduration} days.`;

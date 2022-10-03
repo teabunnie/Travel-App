@@ -7,7 +7,6 @@ test("valid user input data", () => {
     handledCity: "San Francisco",
     handledCountry: "United States",
     handledDate: "10/05/22",
-    handledDaysLeft: 3,
     handledDurationDate: 5,
   });
 });
